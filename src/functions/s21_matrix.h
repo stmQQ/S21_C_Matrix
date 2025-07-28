@@ -13,6 +13,7 @@ typedef struct matrix_struct {
 } matrix_t;
 
 int compare_matrix_sizes(matrix_t *A, matrix_t *B);
+int create_submatrix(matrix_t *A, int row, int col, matrix_t *result);
 
 
 int s21_create_matrix(int rows, int columns, matrix_t *result);

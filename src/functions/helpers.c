@@ -18,8 +18,16 @@ int create_submatrix(matrix_t *A, int row, int col, matrix_t *result) {
         int res_i = 0;
         for (int i = 0; i < A->rows; i++) {
             if (res_i != row) {
-                
+                int res_j = 0;
+                for (int j = 0; j < A->columns; j++) {
+                    if (res_j != col) {
+                        result->matrix[res_i][res_j] = A->matrix[i][j];
+                        res_j++;
+                    }
+                }
+                res_i++;
             }
         }
     }
+    return flag;
 }
